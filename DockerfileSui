@@ -1,0 +1,8 @@
+FROM ubuntu:16.04
+WORKDIR /data/tile/install
+#COPY samples/* samples/
+COPY Ubuntu-16.sh .
+COPY Ubuntu-16-Reload.sh .
+RUN apt-get update && apt-get update -y \
+    && chmod u=rxw *.sh \
+    && ./Ubuntu-16.sh web brigth http://download.geofabrik.de/europe/switzerland-latest.osm.pbf

@@ -1,0 +1,6 @@
+version: '1'
+services:
+  web:
+    build: ./DockerfileSui
+    ports:
+     - "80:80"
